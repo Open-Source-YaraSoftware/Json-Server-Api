@@ -1,0 +1,68 @@
+{
+  "interventions": [
+    {
+      "id": 12345,
+      "workshopId": 101,
+      "mechanicLeaderId": 202,
+      "vehicleId": 303,
+      "scheduledAt": "2024-11-20T08:30:00",
+      "startedAt": "2024-11-20T09:00:00",
+      "completedAt": "2024-11-20T15:30:00",
+      "type": "RoutineMaintenance",
+      "status": "InProgress",
+      "taskList": [1, 2, 3],
+      "description": "Routine maintenance of vehicle, including oil change and general inspection"
+    }
+  ],
+  "tasks": [
+    {
+      "id": 1,
+      "mechanicAssignedId": 404,
+      "interventionId": 12345,
+      "tracking": [
+        {
+          "checkpoint": "Inspection started",
+          "timestamp": "2024-11-20T09:10:00"
+        },
+        {
+          "checkpoint": "Oil change completed",
+          "timestamp": "2024-11-20T11:00:00"
+        }
+      ],
+      "state": "Pending",
+      "description": "Change engine oil and inspect filters"
+    }
+  ],
+  "products": [
+    {
+      "id": 67890,
+      "name": "Brake Pads",
+      "description": "High-quality brake pads for optimal performance",
+      "stockQuantity": 150,
+      "lowStockThreshold": 20,
+      "workshopId": 101
+    }
+  ],
+  "productRequests": [
+    {
+      "id": 98765,
+      "requestedQuantity": 10,
+      "taskId": 1,
+      "productId": 67890,
+      "workshopId": 101,
+      "status": "PendingApproval"
+    }
+  ],
+  "profiles": [
+    {
+      "id": 123456,
+      "firstName": "John",
+      "lastName": "Doe",
+      "dni": 987654321,
+      "email": "john.doe@example.com",
+      "age": 30,
+      "location": "New York, USA",
+      "userId": 7890
+    }
+  ]
+}
